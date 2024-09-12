@@ -1,0 +1,9 @@
+create or replace function InoutFn(in a numeric ,in b numeric ,out c numeric ) as $$
+--returns integer as 
+begin 
+	c:=a+b;
+end;
+$$ language  plpgsql;
+
+
+select InoutFn(1,2)
