@@ -1,0 +1,15 @@
+CREATE OR replace  FUNCTION ForLoop()
+returns integer as $$
+declare 
+n integer:=5;
+i integer:=0;
+begin
+	for i in 1..n loop
+		raise notice 'iteration%',i;
+	end loop;
+return 1;
+end;
+$$ language plpgsql;
+
+
+select ForLoop()
